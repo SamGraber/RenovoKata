@@ -7,11 +7,14 @@ namespace RenovoKata.Items
 {
 	public class Offer
 	{
-		public Offer(int numItems, int price)
+		public Offer(string itemType, int numItems, int price)
 		{
+			ItemType = itemType;
 			NumItems = numItems;
 			OfferPrice = price;
 		}
+
+		public string ItemType { get; set; }
 
 		public int NumItems { get; set; }
 
