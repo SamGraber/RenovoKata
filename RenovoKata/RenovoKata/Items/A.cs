@@ -29,5 +29,13 @@ namespace RenovoKata.Items
 			else
 				return false;
 		}
+
+		public override bool IsSameType(string s)
+		{
+			if (s == "A")
+				return true;
+			else
+				return false;
+		}
 	}
 }
