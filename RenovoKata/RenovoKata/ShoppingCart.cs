@@ -10,43 +10,22 @@ namespace RenovoKata
 	{
 		public ShoppingCart()
 		{
-			aList = new List<A>();
-			bList = new List<B>();
-			cList = new List<C>();
-			dList = new List<D>();
+			itemList = new List<Item>();
 		}
 
-		public List<A> aList { get; set; }
-		public List<B> bList { get; set; }
-		public List<C> cList { get; set; }
-		public List<D> dList { get; set; }
+		public List<Item> itemList { get; set; }
 
 		public int AddItem(Item i)
 		{
-			int count;
+			int count = 0;
 
-			if (i is A)
+			itemList.Add(i);
+
+			foreach (Item x in itemList)
 			{
-				aList.Add(i as A);
-				count = aList.Count;
+				if (i.IsSameType(x))
+					count++;
 			}
-			else if (i is B)
-			{
-				bList.Add(i as B);
-				count = bList.Count;
-			}
-			else if (i is C)
-			{
-				cList.Add(i as C);
-				count = cList.Count;
-			}
-			else if (i is D)
-			{
-				dList.Add(i as D);
-				count = dList.Count;
-			}
-			else
-				return 0;
 
 			return i.GetPrice(count);
 		}
