@@ -11,9 +11,13 @@ namespace RenovoKata
 		public ShoppingCart()
 		{
 			itemList = new List<Item>();
+
+			TodayDeals = new List<Offer>();
 		}
 
 		public List<Item> itemList { get; set; }
+
+		public List<Offer> TodayDeals { get; set; }
 
 		public int AddItem(Item i)
 		{
