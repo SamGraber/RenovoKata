@@ -23,17 +23,32 @@ namespace RenovoKata
 
 		public int AddItem(Item i)
 		{
-			if (i is A)
-				aList.Add(i as A);
-			else if (i is B)
-				bList.Add(i as B);
-			else if (i is C)
-				cList.Add(i as C);
-			else if (i is D)
-				dList.Add(i as D);
+			int count;
 
-			//tally the price of the new item
-			return 0;
+			if (i is A)
+			{
+				aList.Add(i as A);
+				count = aList.Count;
+			}
+			else if (i is B)
+			{
+				bList.Add(i as B);
+				count = bList.Count;
+			}
+			else if (i is C)
+			{
+				cList.Add(i as C);
+				count = cList.Count;
+			}
+			else if (i is D)
+			{
+				dList.Add(i as D);
+				count = dList.Count;
+			}
+			else
+				return 0;
+
+			return i.GetPrice(count);
 		}
 	}
 }
