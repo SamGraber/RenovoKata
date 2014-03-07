@@ -13,5 +13,10 @@ namespace RenovoKata.Items
 		{
 			return 0;
 		}
+
+		public virtual bool IsSameType(Item i)
+		{
+			return true;
+		}
 	}
 }

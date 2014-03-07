@@ -21,5 +21,13 @@ namespace RenovoKata.Items
 
 			return PRICE;
 		}
+
+		public override bool IsSameType(Item i)
+		{
+			if (i is D)
+				return true;
+			else
+				return false;
+		}
 	}
 }
