@@ -39,6 +39,9 @@ namespace RenovoKata
 					i = new Item();
 					break;
 			}
+
+			int cost = Cart.AddItem(i);
+			TotalPrice += cost;
 		}
 	}
 }
