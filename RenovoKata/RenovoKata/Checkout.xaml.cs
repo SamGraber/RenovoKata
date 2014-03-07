@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace RenovoKata
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Interaction logic for Checkout.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class Checkout : Window
 	{
-		public MainWindow()
+		public Checkout()
 		{
 			InitializeComponent();
 		}
