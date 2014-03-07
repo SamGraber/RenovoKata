@@ -32,7 +32,10 @@ namespace RenovoKata
 
 		private void On_Scan_Item(object sender, RoutedEventArgs e)
 		{
-
+			if (ItemSelector.SelectedIndex != -1)
+				Cashier.PurchaseItem(ItemSelector.Text);
+			else
+				MessageBox.Show("You must select an Item.", "Error");
 		}
 
 		private void On_Clear(object sender, RoutedEventArgs e)
