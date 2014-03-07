@@ -35,7 +35,7 @@ namespace RenovoKata
 			if (ItemSelector.SelectedIndex != -1)
 			{
 				int total = Cashier.PurchaseItem(ItemSelector.Text);
-				TotalPrice.Text = "$" + total.ToString();
+				UpdatePrice(total);
 			}
 			else
 				MessageBox.Show("You must select an Item.", "Error");
@@ -43,6 +43,9 @@ namespace RenovoKata
 
 		private void On_Clear(object sender, RoutedEventArgs e)
 		{
+			Cashier.Clear();
+			UpdatePrice(0);
+		}
 
 		private void UpdatePrice(int price)
 		{
