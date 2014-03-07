@@ -63,12 +63,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Cashier.cs" />
     <Compile Include="Checkout.xaml.cs">
       <DependentUpon>Checkout.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Items\A.cs" />
+    <Compile Include="Items\B.cs" />
+    <Compile Include="Items\C.cs" />
+    <Compile Include="Items\D.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Offer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
