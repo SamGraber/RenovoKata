@@ -23,6 +23,12 @@ namespace RenovoKata
 		{
 			int count = 0;
 
+			foreach (Offer o in TodayDeals)
+			{
+				if (i.IsSameType(o.ItemType))
+					i.Offer = o;
+			}
+
 			itemList.Add(i);
 
 			foreach (Item x in itemList)
