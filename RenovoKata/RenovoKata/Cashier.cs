@@ -81,6 +81,8 @@ namespace RenovoKata
 		{
 			TotalPrice = 0;
 			Cart.ClearAll();
+
+			InitializeOffers();
 		}
 	}
 }
