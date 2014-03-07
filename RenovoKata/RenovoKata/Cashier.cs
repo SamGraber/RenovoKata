@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
+using System.Windows;
 using RenovoKata.Items;
 
 namespace RenovoKata
@@ -12,6 +14,35 @@ namespace RenovoKata
 		{
 			TotalPrice = 0;
 			Cart = new ShoppingCart();
+
+			InitializeOffers();
+		}
+
+		public void InitializeOffers()
+		{
+			try
+			{
+				StreamReader file = new StreamReader("Offers.txt");
+
+				string itemType = file.ReadLine();
+				int numItems;
+				int price;
+				while (itemType != null)
+				{
+					numItems = Convert.ToInt32(file.ReadLine());
+					price = Convert.ToInt32(file.ReadLine());
+
+					Offer offer = new Offer(itemType, numItems, price);
+
+					Cart.TodayDeals.Add(offer);
+
+					itemType = file.ReadLine();
+				}
+			}
+			catch (FileNotFoundException)
+			{
+				MessageBox.Show("Offers.txt file not found.", "Error");
+			}
 		}
 
 		public int TotalPrice { get; set; }
