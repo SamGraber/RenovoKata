@@ -44,6 +44,9 @@ namespace RenovoKata
 		private void On_Clear(object sender, RoutedEventArgs e)
 		{
 
+		private void UpdatePrice(int price)
+		{
+			TotalPrice.Text = "$" + price.ToString();
 		}
 	}
 }
