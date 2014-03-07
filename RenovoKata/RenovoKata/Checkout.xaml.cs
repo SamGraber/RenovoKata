@@ -33,7 +33,10 @@ namespace RenovoKata
 		private void On_Scan_Item(object sender, RoutedEventArgs e)
 		{
 			if (ItemSelector.SelectedIndex != -1)
-				Cashier.PurchaseItem(ItemSelector.Text);
+			{
+				int total = Cashier.PurchaseItem(ItemSelector.Text);
+				TotalPrice.Text = "$" + total.ToString();
+			}
 			else
 				MessageBox.Show("You must select an Item.", "Error");
 		}

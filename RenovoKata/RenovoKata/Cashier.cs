@@ -16,8 +16,8 @@ namespace RenovoKata
 
 		public int TotalPrice { get; set; }
 		public ShoppingCart Cart { get; set; }
-		
-		public void PurchaseItem(string itemID)
+				
+		public int PurchaseItem(string itemID)
 		{
 			Item i;
 
@@ -42,6 +42,8 @@ namespace RenovoKata
 
 			int cost = Cart.AddItem(i);
 			TotalPrice += cost;
+
+			return TotalPrice;
 		}
 	}
 }
