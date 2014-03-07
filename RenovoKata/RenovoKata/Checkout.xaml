@@ -16,7 +16,7 @@
 				<ColumnDefinition Width="Auto" />
 			</Grid.ColumnDefinitions>
 			<TextBlock Text="Item" HorizontalAlignment="Center" />
-			<ComboBox Grid.Row="1" Width="50" Margin="5,5,5,5">
+			<ComboBox x:Name="ItemSelector" Grid.Row="1" Width="50" Margin="5,5,5,5">
 				<ComboBoxItem Content="A" />
 				<ComboBoxItem Content="B" />
 				<ComboBoxItem Content="C" />
