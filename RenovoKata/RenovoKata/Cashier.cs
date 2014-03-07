@@ -45,5 +45,11 @@ namespace RenovoKata
 
 			return TotalPrice;
 		}
+
+		public void Clear()
+		{
+			TotalPrice = 0;
+			Cart.ClearAll();
+		}
 	}
 }
