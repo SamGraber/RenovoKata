@@ -8,6 +8,12 @@ namespace RenovoKata
 {
 	public class Cashier
 	{
+		public Cashier()
+		{
+			TotalPrice = 0;
+			Cart = new ShoppingCart();
+		}
+
 		public int TotalPrice { get; set; }
 		public ShoppingCart Cart { get; set; }
 		
