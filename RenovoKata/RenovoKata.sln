@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenovoKata", "RenovoKata\RenovoKata.csproj", "{B9C47876-4F32-4F16-95BE-F7764BDBC551}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenovoKata", "RenovoKata\RenovoKata.csproj", "{D606FFA4-D23D-4A32-AAC3-1FC10574FD1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B9C47876-4F32-4F16-95BE-F7764BDBC551}.Debug|x86.ActiveCfg = Debug|x86
-		{B9C47876-4F32-4F16-95BE-F7764BDBC551}.Debug|x86.Build.0 = Debug|x86
-		{B9C47876-4F32-4F16-95BE-F7764BDBC551}.Release|x86.ActiveCfg = Release|x86
-		{B9C47876-4F32-4F16-95BE-F7764BDBC551}.Release|x86.Build.0 = Release|x86
+		{D606FFA4-D23D-4A32-AAC3-1FC10574FD1E}.Debug|x86.ActiveCfg = Debug|x86
+		{D606FFA4-D23D-4A32-AAC3-1FC10574FD1E}.Debug|x86.Build.0 = Debug|x86
+		{D606FFA4-D23D-4A32-AAC3-1FC10574FD1E}.Release|x86.ActiveCfg = Release|x86
+		{D606FFA4-D23D-4A32-AAC3-1FC10574FD1E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
