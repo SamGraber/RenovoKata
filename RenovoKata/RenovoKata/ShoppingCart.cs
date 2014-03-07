@@ -19,6 +19,8 @@ namespace RenovoKata
 
 		public List<Offer> TodayDeals { get; set; }
 
+		#region List Actions
+
 		public int AddItem(Item i)
 		{
 			int count = 0;
@@ -60,5 +62,7 @@ namespace RenovoKata
 			itemList.Clear();
 			TodayDeals.Clear();
 		}
+
+		#endregion / List Actions
 	}
 }
