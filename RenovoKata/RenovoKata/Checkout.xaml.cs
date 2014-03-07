@@ -22,7 +22,13 @@ namespace RenovoKata
 		public Checkout()
 		{
 			InitializeComponent();
+
+			Cashier = new Cashier();
+
+			DataContext = Cashier;
 		}
+
+		public Cashier Cashier { get; set; }
 
 		private void On_Scan_Item(object sender, RoutedEventArgs e)
 		{
