@@ -34,7 +34,7 @@ namespace RenovoKata
 
 					Offer offer = new Offer(itemType, numItems, price);
 
-					Cart.TodayDeals.Add(offer);
+					Cart.AddItem(offer);
 
 					itemType = file.ReadLine();
 				}
