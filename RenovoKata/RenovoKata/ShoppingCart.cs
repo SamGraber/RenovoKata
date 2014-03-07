@@ -29,5 +29,15 @@ namespace RenovoKata
 
 			return i.GetPrice(count);
 		}
+
+		public void RemoveItem(Item i)
+		{
+			itemList.Remove(i);
+		}
+
+		public void ClearAll()
+		{
+			itemList.Clear();
+		}
 	}
 }
