@@ -31,15 +31,5 @@ namespace RenovoKata.Items
 
 			return Price;
 		}
-
-		public virtual bool IsSameType(Item i)
-		{
-			return true;
-		}
-
-		public virtual bool IsSameType(string s)
-		{
-			return true;
-		}
 	}
 }
