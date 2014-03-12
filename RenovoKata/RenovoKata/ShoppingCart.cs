@@ -11,11 +11,13 @@ namespace RenovoKata
 		public ShoppingCart()
 		{
 			itemList = new List<Item>();
-
+			Prices = new List<Price>();
 			TodayDeals = new List<Offer>();
 		}
 
 		public List<Item> itemList { get; set; }
+
+		public List<Price> Prices { get; set; }
 
 		public List<Offer> TodayDeals { get; set; }
 
@@ -42,6 +44,11 @@ namespace RenovoKata
 			return i.GetPrice(count);
 		}
 
+		public void AddItem(Price price)
+		{
+			Prices.Add(price);
+		}
+
 		public void AddItem(Offer o)
 		{
 			TodayDeals.Add(o);
@@ -52,6 +59,11 @@ namespace RenovoKata
 			itemList.Remove(i);
 		}
 
+		public void RemoveItem(Price price)
+		{
+			Prices.Remove(price);
+		}
+
 		public void RemoveItem(Offer o)
 		{
 			TodayDeals.Remove(o);
@@ -60,6 +72,7 @@ namespace RenovoKata
 		public void ClearAll()
 		{
 			itemList.Clear();
+			Prices.Clear();
 			TodayDeals.Clear();
 		}
 
