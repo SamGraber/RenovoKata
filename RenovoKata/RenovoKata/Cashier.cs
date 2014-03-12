@@ -15,33 +15,48 @@ namespace RenovoKata
 			TotalPrice = 0;
 			Cart = new ShoppingCart();
 
-			InitializeOffers();
+			InitializePricesandOffers();
 		}
 
-		public void InitializeOffers()
+		public void InitializePricesandOffers()
 		{
 			try
 			{
-				StreamReader file = new StreamReader("Offers.txt");
+				StreamReader file = new StreamReader("PricesandOffers.txt");
 
-				string itemType = file.ReadLine();
+				string beginendChar = file.ReadLine();
+				string itemType;
 				int numItems;
 				int price;
-				while (itemType != null)
+				while (beginendChar != null)
 				{
-					numItems = Convert.ToInt32(file.ReadLine());
-					price = Convert.ToInt32(file.ReadLine());
+					if (beginendChar == "(")
+					{
+						itemType = file.ReadLine();
+						numItems = Convert.ToInt32(file.ReadLine());
 
-					Offer offer = new Offer(itemType, numItems, price);
+						if (file.Peek() == ')')
+						{
+							price = numItems;
+							numItems = 0;
+							Price priceObject = new Price(itemType, price);
+							Cart.AddItem(priceObject);
+						}
+						else
+						{
+							price = Convert.ToInt32(file.ReadLine());
+							beginendChar = file.ReadLine();
+							Offer offer = new Offer(itemType, numItems, price);
+							Cart.AddItem(offer);
+						}
+					}
 
-					Cart.AddItem(offer);
-
-					itemType = file.ReadLine();
+					beginendChar = file.ReadLine();
 				}
 			}
 			catch (FileNotFoundException)
 			{
-				MessageBox.Show("Offers.txt file not found.", "Error");
+				MessageBox.Show("PricesandOffers.txt file not found.", "Error");
 			}
 		}
 
@@ -82,7 +97,7 @@ namespace RenovoKata
 			TotalPrice = 0;
 			Cart.ClearAll();
 
-			InitializeOffers();
+			InitializePricesandOffers();
 		}
 	}
 }

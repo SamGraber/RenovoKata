@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Items\Price.cs" />
     <Compile Include="ShoppingCart.cs" />
     <Page Include="Checkout.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -101,7 +102,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Offers.txt" />
+    <Resource Include="PricesandOffers.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
