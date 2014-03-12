@@ -55,12 +55,12 @@ namespace RenovoKata
 			Prices.Add(price);
 		}
 
-		public void AddItem(Offer o)
+		public void AddItem(Offer offer)
 		{
 			TodayDeals.Add(o);
 		}
 
-		public void RemoveItem(Item i)
+		public void RemoveItem(Item item)
 		{
 			itemList.Remove(i);
 		}
@@ -70,7 +70,7 @@ namespace RenovoKata
 			Prices.Remove(price);
 		}
 
-		public void RemoveItem(Offer o)
+		public void RemoveItem(Offer offer)
 		{
 			TodayDeals.Remove(o);
 		}

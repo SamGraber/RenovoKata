@@ -65,11 +65,11 @@ namespace RenovoKata
 				
 		public int PurchaseItem(string itemID)
 		{
-			Item i;
+			Item item;
 
-			i = new Item(itemID);
+			item = new Item(itemID);
 			
-			int cost = Cart.AddItem(i);
+			int cost = Cart.AddItem(item);
 			TotalPrice += cost;
 
 			return TotalPrice;
