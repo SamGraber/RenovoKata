@@ -13,7 +13,16 @@ namespace RenovoKata.Items
 
 		public virtual int GetPrice(int itemNumber)
 		{
-			return 0;
+			if (Offer != null)
+			{
+				//for every nth item, add the offer price and subtract the price of the previous n - 1 items
+				if ((itemNumber % Offer.NumItems) == 0)
+				{
+					return Offer.OfferPrice - ((Offer.NumItems - 1) * Price);
+				}
+			}
+
+			return Price;
 		}
 
 		public virtual bool IsSameType(Item i)
