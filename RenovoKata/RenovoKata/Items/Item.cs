@@ -7,6 +7,8 @@ namespace RenovoKata.Items
 {
 	public class Item
 	{
+		public int Price { get; set; }
+
 		public Offer Offer { get; set; }
 
 		public virtual int GetPrice(int itemNumber)
