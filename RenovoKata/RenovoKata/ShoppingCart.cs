@@ -41,11 +41,7 @@ namespace RenovoKata
 
 			itemList.Add(item);
 
-			foreach (Item x in itemList)
-			{
-				if (item.Type == x.Type)
-					count++;
-			}
+			count = itemList.Count(x => x.Type == item.Type);
 
 			return item.GetPrice(count);
 		}
