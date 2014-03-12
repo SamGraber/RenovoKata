@@ -30,7 +30,7 @@ namespace RenovoKata
 			foreach (Price price in Prices)
 			{
 				if (item.IsSameType(price.ItemType))
-					item.Price = price.Price;
+					item.Price = price.price;
 			}
 			
 			foreach (Offer offer in TodayDeals)

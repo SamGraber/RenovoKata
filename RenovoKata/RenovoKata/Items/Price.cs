@@ -7,14 +7,14 @@ namespace RenovoKata.Items
 {
 	public class Price
 	{
-		public Price(string itemType, int price)
+		public Price(string itemType, int newprice)
 		{
 			ItemType = itemType;
-			Price = price;
+			price = newprice;
 		}
 
 		public string ItemType { get; set; }
 
-		public int Price { get; set; }
+		public int price { get; set; }
 	}
 }
