@@ -67,29 +67,12 @@ namespace RenovoKata
 		{
 			Item i;
 
-			i = CreateItem(itemID);
+			i = new Item(itemID);
 			
 			int cost = Cart.AddItem(i);
 			TotalPrice += cost;
 
 			return TotalPrice;
-		}
-
-		public Item CreateItem(string itemID)
-		{
-			switch (itemID)
-			{
-				case "A":
-					return new A();
-				case "B":
-					return new B();
-				case "C":
-					return new C();
-				case "D":
-					return new D();
-				default:
-					return new Item();
-			}
 		}
 
 		public void Clear()

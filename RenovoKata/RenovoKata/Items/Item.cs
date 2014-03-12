@@ -7,6 +7,13 @@ namespace RenovoKata.Items
 {
 	public class Item
 	{
+		public Item(string itemType)
+		{
+			Type = itemType;
+		}
+
+		public string Type { get; set; }
+
 		public int Price { get; set; }
 
 		public Offer Offer { get; set; }
