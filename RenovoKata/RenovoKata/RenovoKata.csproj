@@ -72,10 +72,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Items\A.cs" />
-    <Compile Include="Items\B.cs" />
-    <Compile Include="Items\C.cs" />
-    <Compile Include="Items\D.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Items\Offer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

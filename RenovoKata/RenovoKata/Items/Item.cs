@@ -18,7 +18,7 @@ namespace RenovoKata.Items
 
 		public Offer Offer { get; set; }
 
-		public virtual int GetPrice(int itemNumber)
+		public int GetPrice(int itemNumber)
 		{
 			if (Offer != null)
 			{
