@@ -23,25 +23,31 @@ namespace RenovoKata
 
 		#region List Actions
 
-		public int AddItem(Item i)
+		public int AddItem(Item item)
 		{
 			int count = 0;
 
-			foreach (Offer o in TodayDeals)
+			foreach (Price price in Prices)
 			{
-				if (i.IsSameType(o.ItemType))
-					i.Offer = o;
+				if (item.IsSameType(price.ItemType))
+					item.Price = price.Price;
+			}
+			
+			foreach (Offer offer in TodayDeals)
+			{
+				if (item.IsSameType(offer.ItemType))
+					item.Offer = offer;
 			}
 
-			itemList.Add(i);
+			itemList.Add(item);
 
 			foreach (Item x in itemList)
 			{
-				if (i.IsSameType(x))
+				if (item.IsSameType(x))
 					count++;
 			}
 
-			return i.GetPrice(count);
+			return item.GetPrice(count);
 		}
 
 		public void AddItem(Price price)
