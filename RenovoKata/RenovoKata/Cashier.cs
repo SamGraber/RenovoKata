@@ -24,34 +24,26 @@ namespace RenovoKata
 			{
 				StreamReader file = new StreamReader("PricesandOffers.txt");
 
-				string beginendChar = file.ReadLine();
-				string itemType;
-				int numItems;
+				string itemType = file.ReadLine();
 				int price;
-				while (beginendChar != null)
+				int numItems;
+				int offerPrice;
+				while (itemType != null)
 				{
-					if (beginendChar == "(")
-					{
-						itemType = file.ReadLine();
-						numItems = Convert.ToInt32(file.ReadLine());
+					price = Convert.ToInt32(file.ReadLine());
+					numItems = Convert.ToInt32(file.ReadLine());
+					offerPrice = Convert.ToInt32(file.ReadLine());
 
-						if (file.Peek() == ')')
-						{
-							price = numItems;
-							numItems = 0;
-							Price priceObject = new Price(itemType, price);
-							Cart.AddItem(priceObject);
-						}
-						else
-						{
-							price = Convert.ToInt32(file.ReadLine());
-							beginendChar = file.ReadLine();
-							Offer offer = new Offer(itemType, numItems, price);
-							Cart.AddItem(offer);
-						}
+					Price priceObject = new Price(itemType, price);
+					Cart.AddItem(priceObject);
+
+					if (numItems != 0)
+					{
+						Offer offer = new Offer(itemType, numItems, offerPrice);
+						Cart.AddItem(offer);
 					}
 
-					beginendChar = file.ReadLine();
+					itemType = file.ReadLine();
 				}
 			}
 			catch (FileNotFoundException)
